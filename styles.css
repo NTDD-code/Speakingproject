@@ -1,0 +1,249 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0fdf4; /* Lighter, friendly background */
+    text-align: center;
+    padding: 50px;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    background: #fff;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Softer shadow */
+    max-width: 600px; /* Increase max-width for larger input */
+    width: 100%;
+}
+
+h1 {
+    font-size: 28px;
+    color: #34c759; /* Duolingo-like green */
+    margin-bottom: 20px;
+}
+
+#userInput {
+    font-size: 24px; /* Increase font size for input */
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 20px;
+    width: 100%; /* Full width for better use of space */
+    min-height: 100px; /* Minimum height for the input area */
+}
+
+button {
+    background-color: #34c759; /* Duolingo-like green */
+    border: none;
+    border-radius: 25px;
+    color: white;
+    padding: 12px 25px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 10px 5px;
+    transition: transform 0.3s, background-color 0.3s; /* Button animation */
+}
+
+button:hover {
+    background-color: #28a745;
+    transform: scale(1.05);
+}
+
+button:disabled {
+    background-color: #a1e09a;
+    cursor: not-allowed;
+}
+
+#result, #feedback {
+    font-size: 18px;
+    color: #333;
+    margin-top: 20px;
+}
+
+#result {
+    font-weight: bold;
+}
+
+#feedback {
+    font-style: italic;
+}
+
+.text-box1 {
+    border: none;
+    padding: 1rem;
+    border-radius: 1rem;
+    background: #e8e8e8;
+    box-shadow: 20px 20px 60px #c5c5c5,
+           -20px -20px 60px #ffffff;
+    transition: 0.3s;
+    font-size: 1.5rem; /* Điều chỉnh kích thước chữ ở đây */
+}
+
+.text-box1:focus {
+    outline-color: #e8e8e8;
+    background: #e8e8e8;
+    box-shadow: inset 20px 20px 60px #c5c5c5,
+           inset -20px -20px 60px #ffffff;
+    transition: 0.3s;
+}
+
+
+#shrinkBtn {
+    background-color: #e74c3c; /* Màu đỏ cho nút thu nhỏ */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1000; /* Đảm bảo nút ở trên cùng */
+}
+#controls {
+    margin: 20px;
+}
+#voiceSwitch {
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #e50914;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+
+/* Enhanced Styles for startBtn with additional refinements */
+#startBtn {
+    position: relative; /* For adding inner shadow effect */
+    font-weight: bold; /* Bolder text */
+    padding: 15px 35px; /* Increase padding for a larger button */
+    background: linear-gradient(135deg, #34c759, #28a745); /* Gradient background */
+    color: white; /* Ensure text color is visible */
+    border: none; /* Remove default border */
+    border-radius: 30px; /* Slightly more rounded corners */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1), /* Shadow below button */
+                0 -4px 8px rgba(255, 255, 255, 0.5) inset; /* Inner shadow effect */
+    transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+}
+
+#startBtn:hover {
+    background: linear-gradient(135deg, #28a745, #34c759); /* Reverse gradient on hover */
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15), /* Larger shadow on hover */
+                0 -6px 10px rgba(255, 255, 255, 0.6) inset; /* Stronger inner shadow */
+    transform: translateY(-2px); /* Slight upward movement */
+}
+
+#startBtn:active {
+    transform: translateY(1px); /* Pressed down effect */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1), /* Reduced shadow */
+                0 -2px 4px rgba(255, 255, 255, 0.3) inset; /* Reduced inner shadow */
+}
+
+#startBtn:focus {
+    outline: none; /* Remove outline */
+    box-shadow: 0 0 0 4px rgba(52, 199, 89, 0.4); /* Green glow effect */
+}
+/* CSS for the wave effect around the button */
+@keyframes soundWave {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(2.5);
+        opacity: 0;
+    }
+}
+
+.wave {
+    position: absolute;
+    border-radius: 50%;
+    background-color: rgba(52, 199, 89, 0.3); /* Light green, matching the button */
+    animation: soundWave 1s ease-out infinite;
+    pointer-events: none; /* Prevent clicking on waves */
+    transform-origin: center;
+}
+
+.wave:nth-child(1) {
+    width: 100px;
+    height: 100px;
+    animation-delay: 0s;
+}
+
+.wave:nth-child(2) {
+    width: 120px;
+    height: 120px;
+    animation-delay: 0.3s;
+}
+
+.wave:nth-child(3) {
+    width: 140px;
+    height: 140px;
+    animation-delay: 0.6s;
+}
+
+#startBtn {
+    position: relative;
+    overflow: hidden; /* To contain wave elements within the button */
+}
+.cancel-button {
+    font-size: 48px; /* Kích thước chữ lớn */
+    color: white; /* Màu chữ */
+    background-color: red; /* Màu nền */
+    border: none; /* Không có viền */
+    border-radius: 50%; /* Đường viền tròn */
+    width: 100px; /* Kích thước chiều rộng */
+    height: 100px; /* Kích thước chiều cao */
+    cursor: pointer; /* Con trỏ khi rê chuột vào */
+    position: fixed; /* Vị trí cố định */
+    bottom: 20px; /* Cách đáy màn hình */
+    right: 20px; /* Cách bên phải màn hình */
+    display: flex; /* Để căn giữa */
+    justify-content: center; /* Căn giữa ngang */
+    align-items: center; /* Căn giữa dọc */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Đổ bóng */
+}
+#generateTopicBtn {
+    background-color: #ffcc00; /* Bright yellow for topic button */
+    border: none;
+    border-radius: 20px;
+    color: black;
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 10px;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+#generateTopicBtn:hover {
+    background-color: #ffb300;
+    transform: scale(1.05);
+}
+
+#ieltsTopic {
+    font-size: 18px;
+    color: #333;
+    margin-top: 20px;
+}
+
+.caption-container {
+    background-color: rgba(0, 0, 0, 0.75); /* Dark background for better readability */
+    color: white; /* White text for contrast */
+    padding: 10px;
+    border-radius: 10px;
+    position: fixed; /* Fix position to the bottom */
+    bottom: 20px; /* 20px from the bottom of the screen */
+    left: 50%;
+    transform: translateX(-50%); /* Center horizontally */
+    width: auto; /* Adjust width based on content */
+    max-width: 80%; /* Do not exceed 80% of the screen width */
+    z-index: 1000; /* Ensure it stays above other elements */
+    font-size: 1.2rem; /* Adjust font size for readability */
+    text-align: center; /* Center text alignment */
+    word-wrap: break-word; /* Allow line breaks within words */
+}
+
+#realTimeCaptions {
+    margin: 0; /* Remove default margin */
+}

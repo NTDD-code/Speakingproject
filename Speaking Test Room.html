@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speaking Test Room</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>IELTS Speaking Test Room</h1>
+
+        <!-- Generate Topic Button -->
+        <button id="generateTopicBtn">Generate IELTS Topic</button>
+        <p id="ieltsTopic">Your topic will appear here.</p>
+
+        <!-- Timer -->
+        <p>Set Timer:</p>
+        <input type="number" id="timerInput" min="1" max="15" value="2"> minutes
+        <p id="timerDisplay">00:00</p>
+        <!-- Add a section to display live captions -->
+        <p id="captionsDisplay">Captions: </p>
+
+
+        <!-- Microphone for Recording -->
+        <button id="pronounceBtn">Nghe phát âm</button>
+        <button id="startBtn">
+            Bắt đầu luyện tập
+            <div class="wave"></div>
+            <div class="wave"></div>
+            <div class="wave"></div>
+        </button>
+
+        <!-- Score Display -->
+        <p id="scoreDisplay">Your score will appear here.</p>
+        <p id="result"></p>
+        <p id="feedback"></p>
+    </div>
+    <script src="script2.js"></script>
+</body>
+</html>

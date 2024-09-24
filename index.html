@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luyện Nói Tiếng Anh</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://kit.fontawesome.com/c62979c22b.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Luyện Nói Tiếng Anh</h1>
+        <p>Nhập từ hoặc đoạn văn để luyện đọc:</p>
+        <textarea class="text-box1" id="userInput" rows="5" cols="30" placeholder="Nhập từ hoặc đoạn văn ở đây..."></textarea>
+        <div id="suggestionsBox" style="border: 1px solid #ccc; display: none;"></div>
+        <button id="fullscreenBtn"><i class="fa-solid fa-expand"></i> Phóng to</button>
+        <button id="pronounceBtn"><i class="fa-solid fa-play"></i> Nghe phát âm</button>
+        <button id="startBtn">
+            <i class="fa-solid fa-microphone"></i>
+            Bắt đầu luyện tập
+            <div class="wave"></div>
+            <div class="wave"></div>
+            <div class="wave"></div>
+        </button>
+        
+
+        <button id="voiceSwitch"><i class="fa-solid fa-arrows-rotate"></i> Giọng hiện tại: Anh - Mỹ</button>
+
+        <a href="Speaking Test Room.html"><button id="enterTestRoomBtn">Enter Speaking Test Room <i class="fa-solid fa-flask-vial"></i></button></a>
+        
+        
+        
+        <p id="result"></p>
+        <p id="feedback"></p>
+        <canvas id="skillChart" width="400" height="200"></canvas>
+
+
+        <!-- Thêm phần tử canvas cho biểu đồ -->
+        <canvas id="myChart" width="400" height="200"></canvas>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
